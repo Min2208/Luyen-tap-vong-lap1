@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 5</title>
+</head>
+<body>
+<script>
+    let num = prompt("Hay nhap so luong day can hien thi");
+    let count = 0;
+    let a = 0, b = 1, temp;
+    let result = 0;
+    while (count < num) {
+        temp = a;
+        a = a + b;
+        b = temp;
+        count++;
+        result += b;
+    }
+    document.write(result);
+
+
+</script>
+
+</body>
+</html>

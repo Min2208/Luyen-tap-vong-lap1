@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 8</title>
+</head>
+<body>
+<button onclick="playgame()">Play/Return</button>
+<script>
+    function playgame() {
+        let a=prompt("Nhap khoang bat dau");
+        let b=prompt("Nhap khoang ket thuc");
+        let array=[];
+        if (b<a){
+            b=prompt("Hay nhap lai khoang ket thuc");
+        }
+        for (let i=a; i<=b; i++){
+            array.push(i);
+        }
+        let index=Math.floor(Math.random()*array.length);
+        let result  =array[index];
+        let count=0;
+        let c = prompt("Hay nhap gia tri muon doan");
+        while (count < 3) {
+
+            if (c == result) {
+                alert("chuc mung ban da chien thang");
+                break;
+            } else {
+                c = prompt("Sai! Hay nhap lai gia tri ban doan");
+            }
+            count++;
+        }
+        alert("Ban da that bai");
+    }
+</script>
+</body>
+</html>
